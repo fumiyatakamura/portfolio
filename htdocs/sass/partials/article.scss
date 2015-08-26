@@ -1,0 +1,64 @@
+/* article heading
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.article-heading{ margin-top: 40px; padding-left: 15px; border-left: 3px solid #93278F; }
+.about-aside .skill-list li{ display: block; list-style-type: square; }
+aside .article-heading{ border-left: 2px solid gray; }
+
+
+/* article style
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.project-image img{ width: 100%; }
+.images{ text-align: center; }
+
+.article-layout{
+	max-width: 960px;
+	margin: 30px auto; }
+
+.project-article,
+.project-aside,
+.about-aside,
+.about-article{ width: 90%; padding: 0 5%; }
+
+.project-aside,
+.about-aside{ margin-top: 50px; }
+
+.about-aside li{ padding-left: 20px; }
+
+.project-article p{ width: 100%; }
+.project-article p a{ color: #888; }
+
+@media (min-width: 640px) and (orientation: landscape) {
+
+	.project-article,
+	.about-article{
+		width: 65%;
+		padding: 1% 4% 1% 1%;
+		float: left; }
+
+	.project-aside,
+	.about-aside{
+		width: 28%;
+		padding: 1%;
+		float: left;
+		margin-top: 0; }
+
+}
+
+/* data list style in main section */
+.project-name, .project-data, .project-aside{
+  font-family: "Helvetica Neue", "Open Sans", Sans-serif;
+  font-weight: 100; }
+.project-data li{ display: block; font-size: 2rem; }
+
+
+/* data list style on aside */
+.project-data{ margin: 30px 0; }
+
+.project-aside dd,
+.project-aside > ul > li{ font-size: 1.5rem; margin-bottom: 10px; display: block; }
+
+.project-aside dt,
+.project-aside >ul>li>ul>li{ font-size: 2.5rem; display: block; }
+
+/* article-style section | bottom space */
+.project-section{ padding-bottom: 70px; }

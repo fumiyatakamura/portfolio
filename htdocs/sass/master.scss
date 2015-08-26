@@ -1,0 +1,226 @@
+@import "compass/reset";
+@import "partials/basic.scss";
+@import "partials/article.scss";
+@import "partials/icons.scss";
+@import "partials/btn.scss";
+@import "partials/menu.scss";
+@import "partials/txt.scss";
+/*@import "partials/vh-fix.scss";*/
+
+
+
+/* header, contact & footer
+******************************/
+
+h1.logo{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Open Sans", Futura, sans-serif;
+  font-weight: 600;
+  color: #fcfcfc;
+  a{ text-decoration: none; }
+
+}
+@media (min-width: 767px){
+	h1.logo{
+		font-size: 3rem;
+		top: 10px; }
+}
+
+
+header.index{
+	width: 100%;
+	height: 100vh;/*iOSで空白が出る問題-> jsで対応する*/
+	z-index: 1;
+	background: rgba(0,0,0,0.5); }
+
+header h2.my-title{
+	clear: both;
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	color: #ccc;
+
+	@media (min-width: 640px){
+	top: 50%;
+	left: 20%; }
+}
+
+
+.header-image{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -999;
+	background: url(../images/m01.jpg) center center no-repeat; /*mobile 用画像準備*/
+	background-size: 100% auto; }
+@media (min-width: 640px){
+	.header-image{
+		background: url(../images/01.jpg) center center no-repeat fixed;
+		background-size: cover; }
+}
+
+header:not(.index){
+	overflow: hidden;
+	padding-bottom: 3px;
+	height: 55px;
+	box-shadow: 0px 3px 5px #eee; }
+
+header:not(.index) h1 a,
+header:not(.index) nav ul li a{ color: #555; }
+header:not(.index) nav ul li a:hover{ color: #ccc; }
+/*@media (min-width: 767px){
+	header:not(.index){
+		padding-bottom: 10px;
+		height: auto;
+		nav ul li a:hover{ color: #EEDDED; }
+		 }
+}*/
+
+#contact{
+	background: rgba(30,30,30,1);
+	text-align: center;
+	padding-top: 100px; }
+
+.e-mail{
+	font-family: "Helvetica Neue";
+	font-weight: 100;
+	text-decoration: none;
+	font-size: 2rem; }
+@media (min-width: 640px){
+	.e-mail{ font-size: 4rem; }
+}
+
+footer{
+	background: rgba(30,30,30,1);
+	text-align: center; }
+
+/** spacing **/
+footer{
+	padding-bottom: 10%;
+
+	.sns{
+		clear: both;
+		padding-top: 50px;
+		margin-bottom: 30px; }
+}
+@media (min-width: 640px){
+	footer{ padding-bottom: 3%; }
+}
+
+.footer-nav{
+	padding: 100px 0 90px;
+
+	li{ padding: 10px; }
+	@media (min-width: 767px){
+		.footer-nav li{ padding: 20px; }
+	}
+}
+
+
+
+/* page title
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-title{
+	font-weight: 600;
+	clear:both;
+	text-align: center;
+	padding: 10% 0 5%; }
+@media (min-width: 640px) {
+  .page-title{ padding: 10%; }
+}
+
+
+/* index.html
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.intro{
+	padding: 100px 0;
+	background-color: #fff;
+
+	h3{ margin: 0 auto 40px; background-color: #fff; text-align: center; }
+	p.text-content{ text-align: left; color: #333; }
+}
+
+.feature{
+	text-align: center;
+	background-color: #ccc;
+
+	.one-second{ background-color: #ccc; }
+	h4{ position: relative; color: #eee; }
+	.btn{position :relative;  }
+
+	img{
+	width: 100%;
+	transition: 0.3s; }
+	img:hover{ opacity: 0.5; }
+}
+
+
+/* work.html
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.project{
+	width: 100%;
+	background: #000;
+	margin-bottom: -64px;
+
+	a{ text-decoration: none; }
+}
+
+.concept-image{ float: none; }
+.concept-image img{ width: 100%; opacity: 0.5; }
+
+.project-info{
+	font-weight: 700;
+	display: inline;
+	text-align: center;
+	position: relative;
+	top: -60px; }
+
+.project-title{ font-size: 3.5rem; }
+ul.data li{ display: none; }
+
+@media (min-width: 960px) {
+	.project-info{
+		position: static;
+		text-align: left;
+		float: left;
+		padding: 20px 20px;
+		font-weight: 300;
+		color: #555; }
+	ul.data li{ display: block; }
+	.project:hover .project-info{ color: #eee; }
+	.project-info .project-title{
+		font-size: 3rem;
+		margin: 0;
+		text-decoration: none !important; }
+	.project-info ul li{
+		font-size: 1.5rem;
+		text-decoration: none; }
+
+	.project{
+		background-color: #eee;
+		transition: .1s;
+		margin-bottom: 1px; }
+	.concept-image{
+		float: left;
+		width: 70%;
+		z-index: -1; }
+	.concept-image img{
+		width: 100%;
+		opacity: 1;
+		background: #000;
+		transition: 0.1s; }
+
+	.project:hover{
+		background: rgba(0,0,0,0.9);
+		transition: 0.3s; }
+	.project:hover .concept-image img{
+		opacity: 0.4;
+		transition: 0.3s; }
+}

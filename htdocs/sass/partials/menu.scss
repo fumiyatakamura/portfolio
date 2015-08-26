@@ -1,0 +1,126 @@
+nav,
+.footer-nav{
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 600;
+  z-index: 100; }
+nav li{ font-size: 2rem; }
+
+.footer-nav{ font-size: 1.6rem; }
+
+
+/* toggle menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* hide menu list */
+#panel{ display: none; }
+#panel.close{ display: block; }
+#home-page{ visibility: hidden; }
+
+
+/* create btn shape */
+#panel-btn{
+  display: inline-block;
+  position: absolute;
+  top:0;
+  right:0;
+  width: 40px;
+  height: 40px;
+  margin: 10px 10px;
+  z-index: 1000;
+}
+
+#panel-btn-icon{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 2px;
+  margin: -1px 0 0 -7px;
+  background: #fff;
+  transition: .2s;
+}
+
+#panel-btn-icon:before,
+#panel-btn-icon:after{
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 2px;
+  background: #fff;
+  transition: .3s;
+}
+
+
+
+/* btn border posotion */
+#panel-btn-icon:before{
+  margin-top: -6px;
+}
+#panel-btn-icon:after{
+  margin-top: 4px;
+}
+
+
+
+/* make x btn */
+#panel-btn .close{
+  background: transparent;
+}
+
+#panel-btn .close:before,
+#panel-btn .close:after{
+  margin-top: 0;
+}
+
+#panel-btn .close:before{ transform: rotate(-45deg); }
+#panel-btn .close:after{ transform: rotate(-135deg); }
+
+
+
+/* menu list style for mobile */
+#panel,
+#panel.close{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  text-align: center; }
+#panel li.panel-items.close{ display: block; margin: 0; padding: 11% 0; width: 100%; background: rgba(0,0,0,0.9); border-bottom: 2px solid #000; visibility: visible; animation: Slide .5s ease-in-out; }
+#panel li.panel-items.close a{ display: inline-block; text-align: center; vertical-align: middle; color: #eee; padding: 4%; }
+
+@keyframes Slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* change btn color */
+header:not(.index) {
+  #panel-btn-icon,
+  #panel-btn-icon:before,
+  #panel-btn-icon:after{ background: #888; }
+  #panel-btn .close{ background: transparent; }
+}
+
+
+
+
+@media (min-width: 640px) {
+  #panel-btn{ display: none; }
+  #panel{
+    display: block;
+    width: auto;
+    top: 5px;
+    right:0; }
+  nav{
+  float: right;
+  margin-top: 10px; }
+  nav li{ margin: 0 20px; }
+}

@@ -1,0 +1,20 @@
+.btn{
+  	font-family: "Helvetica Neue", "Open Sans", Helvetica, sans-serif;
+  	margin-bottom: 10px;
+	padding: 5px 15px;
+	text-decoration: none;
+	display: inline-block;
+	background-color: transparent;
+	border: 1px solid #777;
+	color: #777;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	transition: 0.2s; }
+
+ /* Video Play Icon */
+.video-btn:before{ content: "▶︎"; margin-right: 5px; }
+
+.btn:hover{
+	background-color: #333;
+	color: #eee;
+	transition: 0.3s; }
