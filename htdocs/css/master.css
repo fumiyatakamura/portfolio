@@ -328,6 +328,11 @@ aside .article-heading {
   padding-bottom: 70px;
 }
 
+.photo-work {
+  max-width: 95%;
+  margin: 10px 0;
+}
+
 /* SVG icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .icon {
